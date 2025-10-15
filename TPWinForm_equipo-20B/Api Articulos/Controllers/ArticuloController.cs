@@ -31,14 +31,21 @@ namespace Api_Articulos.Controllers
         // POST: api/Articulo
         public void Post([FromBody]ArticuloDTO art)
         {
+            /*if (art is null)
+            {
+                throw new ArgumentNullException(nameof(art));
+            }*/
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             Articulo ultimo = new Articulo();
-            ultimo.Nombre = art.Nombre;
-            ultimo.Precio = art.Precio;
+          
             ultimo.Codigo = art.Codigo;
+            ultimo.Nombre = art.Nombre;
+            ultimo.Descripcion = art.Descripcion
             //ultimo.Imagenes = art.Urlimagen;
             ultimo.Marca = new Marca { IdMarca = art.Idmarca };
             ultimo.Categoria = new Categoria { IdCategoria = art.IdCategoria };
+            ultimo.Precio = art.precio;
 
             negocio.agregar(ultimo);
 
@@ -48,7 +55,7 @@ namespace Api_Articulos.Controllers
         }
 
         // PUT: api/Articulo/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] ArticuloDTO art)
         {
         }
 

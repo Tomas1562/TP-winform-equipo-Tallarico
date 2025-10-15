@@ -5,7 +5,17 @@
       "ProjectGuid": "fbe09cfc-372b-45eb-a1dd-bf2cc19f9ab7",
       "DisplayName": "negocio",
       "ColorIndex": 0
+    },
+    "461519d0-fbbc-4394-9ce9-24771c9c8e1b": {
+      "ProjectGuid": "461519d0-fbbc-4394-9ce9-24771c9c8e1b",
+      "DisplayName": "Api Articulos",
+      "ColorIndex": 1
+    },
+    "6d079328-53cc-4a97-bfb3-388979b1ccc5": {
+      "ProjectGuid": "6d079328-53cc-4a97-bfb3-388979b1ccc5",
+      "DisplayName": "dominio",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
