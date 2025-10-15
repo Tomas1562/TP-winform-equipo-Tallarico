@@ -1,0 +1,6 @@
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\dominio\bin\Debug\dominio.dll
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\dominio\bin\Debug\dominio.pdb
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\dominio\obj\Debug\dominio.dll
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\dominio\obj\Debug\dominio.pdb

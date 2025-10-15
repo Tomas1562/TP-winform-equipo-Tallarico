@@ -1,0 +1,9 @@
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\bin\Debug\negocio.dll
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\bin\Debug\negocio.pdb
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\bin\Debug\dominio.dll
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\bin\Debug\dominio.pdb
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\obj\Debug\negocio.dll
+C:\SQL2022\TP-winform-equipo-Tallarico\TPWinForm_equipo-20B\negocio\obj\Debug\negocio.pdb
