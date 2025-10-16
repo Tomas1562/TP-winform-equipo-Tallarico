@@ -8,6 +8,7 @@ using dominio;
 using negocio;
 using Api_Articulos.Models;
 
+
 namespace Api_Articulos.Controllers
 {
     public class ArticuloController : ApiController
@@ -37,18 +38,28 @@ namespace Api_Articulos.Controllers
           
             ultimo.Codigo = art.Codigo;
             ultimo.Nombre = art.Nombre;
-            ultimo.Descripcion = art.Descripcion
-            //ultimo.Imagenes = art.Urlimagen;
+            ultimo.Descripcion = art.Descripcion;
             ultimo.Marca = new Marca { IdMarca = art.Idmarca };
             ultimo.Categoria = new Categoria { IdCategoria = art.IdCategoria };
             ultimo.Precio = art.precio;
 
             negocio.agregar(ultimo);
 
+        }
 
+        public void Post2([FromBody]ImagenDTO image)
+        {
 
+            ImagenNegocio negocio = new ImagenNegocio();
+            Imagen ultimo = new Imagen();
+
+            ultimo.IdArticulo = image.IdArticulo;
+            ultimo.UrlImagen = image.UrlImagen;
+            
+            negocio.agregar(ultimo);
 
         }
+
 
         // PUT: api/Articulo/5
         public void Put(int id, [FromBody] ArticuloDTO art)
@@ -58,8 +69,7 @@ namespace Api_Articulos.Controllers
 
             ultimo.Codigo = art.Codigo;
             ultimo.Nombre = art.Nombre;
-            ultimo.Descripcion = art.Descripcion
-            //ultimo.Imagenes = art.Urlimagen;
+            ultimo.Descripcion = art.Descripcion;
             ultimo.Marca = new Marca { IdMarca = art.Idmarca };
             ultimo.Categoria = new Categoria { IdCategoria = art.IdCategoria };
             ultimo.Precio = art.precio;
