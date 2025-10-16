@@ -21,12 +21,24 @@ namespace Api_Articulos.Controllers
         }
 
         // GET: api/Articulo/5
-        public Articulo Get(int id)
+        public HttpResponseMessage Get(int id)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> lista = negocio.listar();
+            var negocio = new ArticuloNegocio();
 
-            return lista.Find(x=> x.idArticulo == id);
+            try
+            {
+                var lista = negocio.listar();
+                var producto = lista.FirstOrDefault(x => x.idArticulo == id);
+
+                if (producto == null)
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "El producto no existe.");
+
+                return Request.CreateResponse(HttpStatusCode.OK, producto);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "Error al obtener el producto: " + ex.Message);
+            }
         }
 
         // POST: api/Articulo
@@ -79,7 +91,7 @@ namespace Api_Articulos.Controllers
             }
         }
 
-        [HttpPost]
+        
         [Route("api/Articulo/AgregarImagenes")]
         public void AgregarImagenes([FromBody] ImagenDTO dto)
         {
@@ -149,10 +161,24 @@ namespace Api_Articulos.Controllers
 
 
         // DELETE: api/Articulo/5
-        public void Delete(int id)
+        public HttpResponseMessage Delete(int id)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            negocio.eliminar(id);
+            var negocio = new ArticuloNegocio();
+
+            try
+            {
+                // que exista el articulo
+                var producto = negocio.listar().FirstOrDefault(x => x.idArticulo == id);
+                if (producto == null)
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "El producto no existe.");
+
+                negocio.eliminar(id);
+                return Request.CreateResponse(HttpStatusCode.OK, "Producto eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "Error al eliminar: " + ex.Message);
+            }
         }
     }
 }
